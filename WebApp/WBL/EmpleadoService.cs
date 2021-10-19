@@ -10,6 +10,7 @@ namespace WBL
 {
     public interface IEmpleadoService
     {
+
         Task<DBEntity> Create(EmpleadoEntity entity);
         Task<DBEntity> Delete(EmpleadoEntity entity);
         Task<IEnumerable<EmpleadoEntity>> Get();
