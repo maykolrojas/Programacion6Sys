@@ -1,7 +1,7 @@
-﻿CREATE PROCEDURE [exp].[EmpleadoActualizar]
+﻿CREATE PROCEDURE [exp].[InquilinoActualizar]
     @Id_TipoInquilino int,
 	@Descripcion VARCHAR(250),
-	@Estado BIT,
+	@Estado BIT
 	
 
 AS BEGIN
@@ -12,15 +12,11 @@ SET NOCOUNT ON
 
 	  UPDATE exp.TipoInquilino SET
 
-	  
+	  TipoInquilino = @TipoInquilino,
 	  Descripcion =@Descripcion,
 	  Estado = @Estado
 
-	   Nombre = @Nombre,
-	     PrimerApellido = @PrimerApellido,
-		 SegundoApellido= @SegundoApellido,
-		 Edad= @Edad,
-		 FechaNacimiento = @FechaNacimiento
+	   
 
 	     WHERE 
 		     Id_TipoInquilino= @Id_TipoInquilino
