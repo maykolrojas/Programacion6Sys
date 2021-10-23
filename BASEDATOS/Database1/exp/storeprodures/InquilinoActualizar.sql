@@ -1,10 +1,8 @@
 ﻿CREATE PROCEDURE [exp].[EmpleadoActualizar]
-    @IdEmpleado int,
-	@Nombre varchar(50),
-	@PrimerApellido varchar(50),
-	@SegundoApellido varchar(50),
-	@Edad int,
-	@FechaNacimiento datetime
+    @Id_TipoInquilino int,
+	@Descripcion VARCHAR(250),
+	@Estado BIT,
+	
 
 AS BEGIN
 SET NOCOUNT ON
@@ -12,7 +10,12 @@ SET NOCOUNT ON
 	  BEGIN TRANSACTION TRASA
 	  BEGIN TRY
 
-	  UPDATE exp.empleado SET
+	  UPDATE exp.TipoInquilino SET
+
+	  
+	  Descripcion =@Descripcion,
+	  Estado = @Estado
+
 	   Nombre = @Nombre,
 	     PrimerApellido = @PrimerApellido,
 		 SegundoApellido= @SegundoApellido,
@@ -20,7 +23,8 @@ SET NOCOUNT ON
 		 FechaNacimiento = @FechaNacimiento
 
 	     WHERE 
-		    IdEmpleado=@IdEmpleado
+		     Id_TipoInquilino= @Id_TipoInquilino
+		    
 		 
 		 COMMIT TRANSACTION TRASA
 		 SELECT 0 AS codeError, '' AS MsgError 

@@ -1,5 +1,7 @@
-﻿CREATE PROCEDURE [exp].[EmpleadoEliminar]
- @IdEmpleado int
+﻿CREATE PROCEDURE [exp].[InquilinoInsertar]
+     @Descripcion VARCHAR(250),
+	 @Estado BIT
+
 	
 
 AS BEGIN
@@ -8,9 +10,17 @@ SET NOCOUNT ON
 	  BEGIN TRANSACTION TRASA
 	  BEGIN TRY
 
-	  DELETE FROM exp.empleado WHERE IdEmpleado=@IdEmpleado
-		    
-		 
+	  INSERT INTO exp.TipoInquilino
+	  ( Descripcion,
+		 Estado
+		 )
+
+		 VALUES
+		 (
+		 @Descripcion,
+		 @Estado
+		 )
+
 		 COMMIT TRANSACTION TRASA
 		 SELECT 0 AS codeError, '' AS MsgError 
 
@@ -27,3 +37,5 @@ SET NOCOUNT ON
 		 END CATCH
 
 		 END
+
+

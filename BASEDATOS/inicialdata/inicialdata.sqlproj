@@ -61,7 +61,6 @@
   <ItemGroup>
     <None Include="ScriptConfiguration\01-Provincia.sql" />
     <None Include="ScriptConfiguration\02-Canton.sql" />
-    <None Include="ScriptConfiguration\03-Distrito.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Script.PostDeployment1.sql" />
