@@ -35,7 +35,7 @@ namespace WBL
         {
             try
             {
-                var result = sql.QueryAsync<EmpleadoEntity>(sp: "EmpleadoObtener");
+                var result = sql.QueryAsync<EmpleadoEntity>(sp: "exp.EmpleadoObtener");
 
                 return await result;
 
@@ -77,7 +77,7 @@ namespace WBL
         {
             try
             {
-                var result = sql.ExecuteAsync(sp: "EmpleadoInsertar", Param: new
+                var result = sql.ExecuteAsync(sp: "exp.EmpleadoInsertar", Param: new
 
                 {
                     entity.Nombre,
@@ -108,7 +108,7 @@ namespace WBL
         {
             try
             {
-                var result = sql.ExecuteAsync(sp: "EmpleadoActualizar", Param: new
+                var result = sql.ExecuteAsync(sp: "exp.EmpleadoActualizar", Param: new
 
                 {
                     entity.IdEmpleado,
@@ -140,7 +140,7 @@ namespace WBL
         {
             try
             {
-                var result = sql.ExecuteAsync(sp: "EmpleadoEliminar", Param: new
+                var result = sql.ExecuteAsync(sp: "exp.EmpleadoEliminar", Param: new
 
                 {
                     entity.IdEmpleado
