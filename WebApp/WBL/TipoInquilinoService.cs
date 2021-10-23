@@ -8,21 +8,24 @@ using Entity;
 
 namespace WBL
 {
-    public interface IEmpleadoService
+    public interface ITipoInquilinoService
     {
+        //Task<BDEntity> create (TipoInquilinoEntity entity);
 
-        Task<DBEntity> Create(EmpleadoEntity entity);
-        Task<DBEntity> Delete(EmpleadoEntity entity);
-        Task<IEnumerable<EmpleadoEntity>> Get();
-        Task<EmpleadoEntity> GetById(EmpleadoEntity entity);
-        Task<DBEntity> Update(EmpleadoEntity entity);
+       // Task<DBEntity> Create(InquilinoEntity entity);
+
+        Task<DBEntity> Create(TipoInquilinoEntity entity);
+        Task<DBEntity> Delete(TipoInquilinoEntity entity);
+        Task<IEnumerable<TipoInquilinoEntity>> Get();
+        Task<TipoInquilinoEntity> GetById(TipoInquilinoEntity entity);
+        Task<DBEntity> Update(TipoInquilinoEntity entity);
     }
 
-    public class EmpleadoService : IEmpleadoService
+    public class TipoInquilinoService : ITipoInquilinoService
     {
         private readonly IDataAccess sql;
 
-        public EmpleadoService(IDataAccess _sql)
+        public TipoInquilinoService(IDataAccess _sql)
         {
             sql = _sql;
         }

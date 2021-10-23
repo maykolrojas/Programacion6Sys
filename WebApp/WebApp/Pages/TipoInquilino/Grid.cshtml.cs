@@ -8,18 +8,18 @@ using WBL;
 using Entity;
 
 
-namespace WebApp.Pages.Empleado
+namespace WebApp.Pages.TipoInquilino
 {
     public class GridModel : PageModel
     {
-        private readonly IEmpleadoService empleadoService;
+        private readonly ITipoInquilinoService TipoInquilinoService;
 
-        public GridModel(IEmpleadoService empleadoService)
+        public GridModel(ITipoInquilinoService TipoInquilinoService)
         {
-            this.empleadoService = empleadoService;
+            this.TipoInquilinoService = TipoInquilinoService;
         }
 
-        public IEnumerable<EmpleadoEntity> Gridlist { get; set; } = new List<EmpleadoEntity>();
+        public IEnumerable<InquilinoEntity> Gridlist { get; set; } = new List<InquilinoEntity>();
 
         public string Mensaje { get; set; } = "";
 
@@ -29,7 +29,7 @@ namespace WebApp.Pages.Empleado
         {
             try
             {
-                Gridlist = await empleadoService.Get();
+                Gridlist = await TipoInquilinoService.Get();
 
                 if (TempData.ContainsKey(key: "Msg"))
                 {
@@ -58,7 +58,7 @@ namespace WebApp.Pages.Empleado
         {
             try
             {
-                var result = await empleadoService.Delete(entity: new() { IdEmpleado = id });
+                var result = await TipoInquilinoService.Delete(entity: new() { Id_TipoInquilino = id });
 
 
                 if (result.CodeError != 0)

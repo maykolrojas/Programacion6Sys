@@ -1,5 +1,5 @@
 ﻿@page
-@model WebApp.Pages.Empleado.GridModel
+@model WebApp.Pages.TipoInquilino.GridModel
 @{
 }
 
@@ -18,12 +18,10 @@
                     <table id="GridView" class=" <table table-bordered table table-striped table table-hover">
                          <thead>
                              <tr>
-                                 <th>ID</th>
-                                 <th>Nombre</th>
-                                 <th>PrimerApellido</th>
-                                 <th>SegundoApellido</th>
-                                 <th>Edad</th>
-                                 <th>FechaNacimiento</th>
+                                 <th>Id_TipoInquilino</th>
+                                 <th>Descripcion</th>
+                                 <th>Estado</th>
+                              
                                  <th>Accion</th>
 
                              </tr>
@@ -36,17 +34,15 @@
 
 
                             <tr>
-                                <td> @item.IdEmpleado</td>
-                                <td> @item.Nombre</td>
-                                <td> @item.PrimerApellido</td>
-                                <td> @item.SegundoApellido</td>
-                                <td> @item.Edad</td>
-                                <td> @item.FechaNacimiento.ToString("dd/MM/yyyy")</td>
+                                <td> @item.Id_TipoInquilino</td>
+                                <td> @item.Descripcion</td>
+                                <td> @item.Estado</td>
+                                
 
                                 <td>
-                                    <a class="btn btn-primary" asp-page="Edit" asp-route-id="@item.IdEmpleado"><i class='bx bx-edit-alt'></i></a>
+                                    <a class="btn btn-primary" asp-page="Edit" asp-route-id="@item.Id_TipoInquilino"><i class='bx bx-edit-alt'></i></a>
 
-                                    <button type="button" class="btn btn-danger" onclick="EmpleadoGrid.OnclickEliminar(@item.IdEmpleado)"> 
+                                    <button type="button" class="btn btn-danger" onclick="TipoInquilino.OnclickEliminar(@item.Id_TipoInquilino)"> 
                                         <i class='bx bxs-trash'></i>
                                         </button>
 
@@ -84,5 +80,5 @@
         </script>
          
     
-<script  defer src="~/App/Empleado/Grid.js"></script>
+<script  defer src="~/App/TipoInquilino/Grid.js"></script>
 }
