@@ -57,7 +57,7 @@
   <ItemGroup>
     <Folder Include="Properties" />
     <Folder Include="exp" />
-    <Folder Include="exp\storeprodures" />
+    <Folder Include="exp\Store Procedures" />
     <Folder Include="exp\tables" />
     <Folder Include="schema" />
     <Folder Include="dbo" />
@@ -70,10 +70,10 @@
     <Build Include="schema\exp.sql" />
     <Build Include="exp\tables\empleado.sql" />
     <Build Include="dbo\tables\Provincia.sql" />
-    <Build Include="exp\storeprodures\EmpleadoInsertar.sql" />
-    <Build Include="exp\storeprodures\EmpleadoActualizar.sql" />
-    <Build Include="exp\storeprodures\EmpleadoObtener.sql" />
-    <Build Include="exp\storeprodures\EmpleadoEliminar.sql" />
+    <Build Include="exp\Store Procedures\EmpleadoInsertar.sql" />
+    <Build Include="exp\Store Procedures\EmpleadoActualizar.sql" />
+    <Build Include="exp\Store Procedures\EmpleadoObtener.sql" />
+    <Build Include="exp\Store Procedures\EmpleadoEliminar.sql" />
     <Build Include="dbo\tables\Canton.sql" />
     <Build Include="dbo\tables\Distrito.sql" />
     <Build Include="acc\tables\Contrato.sql" />
@@ -82,7 +82,7 @@
     <Build Include="acc\Store Procedures\ContratoInsertar.sql" />
     <Build Include="acc\Store Procedures\ContratoObtener.sql" />
     <Build Include="dbo\tables\TipoIdentificacion.sql" />
-    <Build Include="exp\storeprodures\TipoIdentificacionLista.sql" />
+    <Build Include="exp\Store Procedures\TipoIdentificacionLista.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="Database1.refactorlog" />

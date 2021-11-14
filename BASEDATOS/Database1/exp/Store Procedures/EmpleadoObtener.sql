@@ -5,13 +5,19 @@
 
 	 SELECT
        E.IdEmpleado,
-	   E.Nombre,
+	   E.Identificacion,
+       E.Nombre,
 	   E.PrimerApellido,
 	   E.SegundoApellido,
 	   E.Edad,
-	   E.FechaNacimiento
+	   E.FechaNacimiento,
+
+	   T.IdTipoIdentificacion,
+     T.Descripcion
 	   
 	   FROM exp.empleado E
+	     INNER JOIN TipoIdentificacion T
+       ON E.IdTipoIdentificacion= T.IdTipoIdentificacion
 
 	     WHERE 
 		 (@IdEmpleado IS NULL OR IdEmpleado=@IdEmpleado)

@@ -12,5 +12,6 @@ Post-Deployment Script Template
 :r .\ScriptConfiguration\01-Provincia.sql
 :r .\ScriptConfiguration\02-Canton.sql
 :r .\ScriptConfiguration\03-Distrito.sql
+:r .\ScriptConfiguration\04-TipoIdentificacion.sql
 
 
