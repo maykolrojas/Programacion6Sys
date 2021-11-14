@@ -1,5 +1,7 @@
 ﻿CREATE PROCEDURE [exp].[EmpleadoActualizar]
     @IdEmpleado int,
+	@IdTipoIdentificacion int,
+	@Identificacion varchar(50),
 	@Nombre varchar(50),
 	@PrimerApellido varchar(50),
 	@SegundoApellido varchar(50),
@@ -13,7 +15,9 @@ SET NOCOUNT ON
 	  BEGIN TRY
 
 	  UPDATE exp.empleado SET
-	   Nombre = @Nombre,
+	  IdTipoIdentificacion= @IdTipoIdentificacion,
+	   Identificacion= @Identificacion,
+        Nombre = @Nombre,
 	     PrimerApellido = @PrimerApellido,
 		 SegundoApellido= @SegundoApellido,
 		 Edad= @Edad,

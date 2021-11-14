@@ -76,6 +76,13 @@
     <Build Include="exp\storeprodures\EmpleadoEliminar.sql" />
     <Build Include="dbo\tables\Canton.sql" />
     <Build Include="dbo\tables\Distrito.sql" />
+    <Build Include="acc\tables\Contrato.sql" />
+    <Build Include="acc\Store Procedures\ContratoActualizar.sql" />
+    <Build Include="acc\Store Procedures\ContratoEliminar.sql" />
+    <Build Include="acc\Store Procedures\ContratoInsertar.sql" />
+    <Build Include="acc\Store Procedures\ContratoObtener.sql" />
+    <Build Include="dbo\tables\TipoIdentificacion.sql" />
+    <Build Include="exp\storeprodures\TipoIdentificacionLista.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="Database1.refactorlog" />

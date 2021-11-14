@@ -42,6 +42,3 @@ SET NOCOUNT ON
    END CATCH
 
  END
-
-
-
