@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace Entity
 {
-    public class DBEntity
+    public class TipoIdentificacionEntity
     {
-        public int CodeError { get; set; }
-        public string MsgError { get; set; }
-
+        public int? IdTipoIdentificacion { get; set; }
+        public string Descripcion { get; set; }
     }
 }
